@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import home  # this must match your function name in views.py
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', home),  # map home view to root URL
 ]
